@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Responsive Webpage</title>
+  <style>
+    body {
+      margin: 0;
+      background:white ;
+      background-image: url(https://images7.alphacoders.com/411/thumb-1920-411820.jpg);
+      
+    }
+
+    nav {
+      background: #3333339c;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .content {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .column {
+      flex: 1;
+      background: #ffffff9e;
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    
+    footer {
+      background:#ffffff80;
+      text-align: center;
+      padding: 10px;
+      margin-top: 285px;
+    }
+
+    
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        padding: 10px;
+      }
+
+      body {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  
+  <div class="content">
+    <div class="column">
+        <p>main content.</p>
+    </div>
+    <div class="column">      
+      <p>This is the sidebar</p>
+    </div>
+  </div>
+
+  
+  <footer>
+    <p>Simple Webpage </p>
+  </footer>
+
+</body>
+</html>

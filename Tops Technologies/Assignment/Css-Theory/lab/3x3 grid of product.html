@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Grid</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f0f0f0;
+      margin: 0; padding: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 15px;
+      text-align: center;
+      border-radius: 8px;
+      transition: 0.3s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .card img {
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    .card h3 {
+      margin: 10px 0 5px;
+    }
+    .card p {
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center;">Product Grid</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://thfvnext.bing.com/th/id/OIP.h84fMBOf7aGB7xUcCuJXzQHaNK?w=115&h=182&c=7&r=0&o=7&cb=thfvnext&dpr=1.5&pid=1.7&rm=3" alt="Product">
+      <h3>MOBILE</h3>
+      <p>Price - 15000</p>
+    </div>
+    <div class="card">
+      <img src="https://i5.walmartimages.com/asr/3a0b16b3-88f9-4797-a546-8a7a5f3d15cc.9cd02e837eeb8ced4ef44bdac35a84e9.jpeg" alt="Product">
+      <h3>laptop</h3>
+      <p> Price - 45000</p>
+    </div>
+    <div class="card">
+      <img src="https://www.bing.com/th/id/OIP.cYdBmJQqdevpyDfe6p0mwwHaIv?w=179&h=211&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" alt="Product">
+      <h3>smart whatch</h3>
+      <p> price - 3000</p>
+    </div>
+    <div class="card">
+      <img src="https://m.media-amazon.com/images/I/713TUYjagQL.jpg" alt="Product">
+      <h3>home theater</h3>
+      <p> Price - 3500</p>
+    </div>
+    <div class="card">
+      <img src="https://thfvnext.bing.com/th/id/OIP.3kzo0sGcwffIQaIVsvIQhgHaJC?w=147&h=180&c=7&r=0&o=7&cb=thfvnext&dpr=1.5&pid=1.7&rm=3" alt="Product">
+      <h3>Refrigerator</h3>
+      <p> Price - 37000</p>
+    </div>
+    
+
+</body>
+</html>
