@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guest Submissions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Guest Submissions</h2>
+    <div id="tableContainer"></div>
+    <a href="index.html">← Back to Form</a>
+  </div>
+
+  <script>
+    const data = JSON.parse(localStorage.getItem("guests")) || [];
+    const container = document.getElementById("tableContainer");
+
+    if (data.length === 0) {
+      container.innerHTML = "<p>No data available</p>";
+    } else {
+      let table = `<table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+          <th>Full Name</th><th>Phone</th><th>Email</th><th>Aadhar</th>
+          <th>Check-In</th><th>Check-Out</th><th>Purpose</th>
+        </tr>`;
+
+      data.forEach(entry => {
+        table += `<tr>
+          <td>${entry.fullName}</td>
+          <td>${entry.phone}</td>
+          <td>${entry.email}</td>
+          <td>${entry.aadhar}</td>
+          <td>${entry.checkIn}</td>
+          <td>${entry.checkOut}</td>
+          <td>${entry.purpose}</td>
+        </tr>`;
+      });
+
+      table += `</table>`;
+      container.innerHTML = table;
+    }
+  </script>
+</body>
+</html>
