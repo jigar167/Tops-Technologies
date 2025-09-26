@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mobile Products Website - Bootstrap 5</title>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      padding-top: 70px; 
+    }
+    .navbar {
+      background-color: #007bff;
+    }
+    .navbar-brand, .nav-link {
+      color: white !important;
+      font-weight: 600;
+    }
+    .nav-link:hover {
+      color: #d1e7ff !important;
+    }
+    .card-title {
+      font-weight: 700;
+    }
+    footer {
+      background-color: #007bff;
+      color: white;
+      padding: 20px 0;
+      margin-top: 40px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">MobileShop</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarMenu"
+        aria-controls="navbarMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Support</a></li>
+              <li><a class="dropdown-item" href="#">FAQ</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Feedback</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <form class="d-flex" role="search" onsubmit="event.preventDefault(); alert('Search feature coming soon!')">
+          <input class="form-control me-2" type="search" placeholder="Search products..." aria-label="Search" />
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div class="container my-5">
+
+    <header class="text-center mb-5">
+      <h1>Welcome to MobileShop</h1>
+      <p>Your one-stop shop for the latest mobile phones!</p>
+    </header>
+
+   
+    <section id="products">
+      <h2 class="mb-4 text-center">Our Mobile Products</h2>
+      
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+       
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="https://th.bing.com/th/id/OIP.vhJSI4kR9_3R4hShpvpGhwHaE8?w=239&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" class="card-img-top" alt="Mobile Model A" />
+            <div class="card-body">
+              <h5 class="card-title">Mobile Model A</h5>
+              <p class="card-text">High performance smartphone with 6.5-inch display, 64MP camera, and 4000mAh battery.</p>
+              <p class="fw-bold">₹49,999</p>
+            </div>
+            <div class="card-footer text-center">
+              <button class="btn btn-primary w-100">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="https://rukminim2.flixcart.com/image/312/312/xif0q/mobile/y/s/g/-original-imahgfmy2zgqvjmy.jpeg?q=70" class="card-img-top" alt="Mobile Model B" />
+            <div class="card-body">
+              <h5 class="card-title">Mobile Model B</h5>
+              <p class="card-text">Sleek design with 5G support, AMOLED screen, and 48MP triple camera setup.</p>
+              <p class="fw-bold">₹78,899</p>
+            </div>
+            <div class="card-footer text-center">
+              <button class="btn btn-primary w-100">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="https://th.bing.com/th/id/OIP.y1QYpQaLqtYX-qoUc45wzwHaEK?w=291&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3" class="card-img-top" alt="Mobile Model C" />
+            <div class="card-body">
+              <h5 class="card-title">Mobile Model C</h5>
+              <p class="card-text">Budget-friendly with powerful battery life, dual cameras, and fast charging.</p>
+              <p class="fw-bold">₹90,999</p>
+            </div>
+            <div class="card-footer text-center">
+              <button class="btn btn-primary w-100">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
+    </section>
+  </div>
+
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MobileShop. All rights reserved.</p>
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
