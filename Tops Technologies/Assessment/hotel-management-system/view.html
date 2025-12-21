@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Guest Data</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>Guest Records</h2>
+
+<table border="1" width="100%" id="dataTable">
+    <tr>
+        <th>Full Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Aadhar</th>
+        <th>Check In</th>
+        <th>Check Out</th>
+    </tr>
+</table>
+
+<p id="noData"></p>
+
+<script>
+let data = JSON.parse(localStorage.getItem("guests"));
+
+if (!data || data.length === 0) {
+    document.getElementById("noData").innerText = "No data available";
+} else {
+    let table = document.getElementById("dataTable");
+    data.forEach(item => {
+        let row = table.insertRow();
+        row.innerHTML = `
+            <td>${item.name}</td>
+            <td>${item.phone}</td>
+            <td>${item.email}</td>
+            <td>${item.aadhar}</td>
+            <td>${item.checkin}</td>
+            <td>${item.checkout}</td>
+        `;
+    });
+}
+</script>
+
+</body>
+</html>
