@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="msg"></p>
+
+<script>
+try {
+  let a = 10, b = 0;
+  if (b === 0) throw "Division by zero is not allowed";
+  document.getElementById("msg").innerHTML = a / b;
+}
+catch (e) {
+  document.getElementById("msg").innerHTML = "Error: " + e;
+}
+</script>
+
+</body>
+</html>

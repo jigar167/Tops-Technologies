@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 id="clock"></h2>
+
+<script>
+setTimeout(() => {
+  document.body.style.backgroundColor = "yellow";
+}, 5000);
+
+setInterval(() => {
+  let t = new Date();
+  document.getElementById("clock").innerHTML =
+    t.getHours() + ":" + t.getMinutes() + ":" + t.getSeconds();
+}, 1000);
+</script>
+
+</body>
+</html>
