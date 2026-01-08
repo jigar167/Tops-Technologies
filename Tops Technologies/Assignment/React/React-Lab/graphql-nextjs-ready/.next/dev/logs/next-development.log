@@ -1,0 +1,4 @@
+[00:00:02.883] Server  LOG     ✓ Ready in 1803ms
+[00:00:20.260] Server  LOG     ○ Compiling / ...
+[00:00:25.221] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:37.010] Browser LOG     Download the Apollo DevTools for a better development experience: %s https://chrome.google.com/webstore/detail/apollo-client-developer-t/jdkknkkbebbapilgoeccciglkfbmbnfm

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///D:/Tops%20Technologies/Repository_New/Tops-Technologies/Tops%20Technologies/Assignment/React/React-Lab/graphql-nextjs-ready/src/lib/apolloClient.ts"],"sourcesContent":["import { ApolloClient, InMemoryCache, HttpLink } from \"@apollo/client\";\n\nconst link = new HttpLink({\n  uri: \"https://graphql-pokemon2.vercel.app/\",\n});\n\nconst client = new ApolloClient({\n  link: link,\n  cache: new InMemoryCache(),\n});\n\nexport default client;\n"],"names":[],"mappings":";;;;AAAA;AAAA;AAAA;;AAEA,MAAM,OAAO,IAAI,0KAAQ,CAAC;IACxB,KAAK;AACP;AAEA,MAAM,SAAS,IAAI,0LAAY,CAAC;IAC9B,MAAM;IACN,OAAO,IAAI,yLAAa;AAC1B;uCAEe"}},
+    {"offset": {"line": 30, "column": 0}, "map": {"version":3,"sources":["file:///D:/Tops%20Technologies/Repository_New/Tops-Technologies/Tops%20Technologies/Assignment/React/React-Lab/graphql-nextjs-ready/src/app/layout.tsx"],"sourcesContent":["\"use client\";\n\nimport { ApolloProvider } from \"@apollo/client\";\nimport client from \"../lib/apolloClient\";\n\nexport default function RootLayout({\n  children,\n}: {\n  children: React.ReactNode;\n}) {\n  return (\n    <html>\n      <body>\n        <ApolloProvider client={client}>\n          {children}\n        </ApolloProvider>\n      </body>\n    </html>\n  );\n}"],"names":[],"mappings":";;;;;AAEA;AACA;AAHA;;;;AAKe,SAAS,WAAW,EACjC,QAAQ,EAGT;IACC,qBACE,8OAAC;kBACC,cAAA,8OAAC;sBACC,cAAA,8OAAC,0LAAc;gBAAC,QAAQ,qIAAM;0BAC3B;;;;;;;;;;;;;;;;AAKX"}}]
+}

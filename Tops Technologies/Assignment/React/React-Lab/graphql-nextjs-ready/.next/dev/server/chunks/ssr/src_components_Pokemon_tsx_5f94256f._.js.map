@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/Tops%20Technologies/Repository_New/Tops-Technologies/Tops%20Technologies/Assignment/React/React-Lab/graphql-nextjs-ready/src/components/Pokemon.tsx"],"sourcesContent":["\"use client\";\n\nimport { gql, useQuery } from \"@apollo/client\";\n\nconst GET_POKEMONS = gql`\n  query {\n    pokemons(first: 5) {\n      name\n      image\n    }\n  }\n`;\n\nexport default function Pokemon() {\n  const { loading, error, data } = useQuery(GET_POKEMONS);\n\n  if (loading) return <p>Loading...</p>;\n  if (error) return <p>Error loading data</p>;\n\n  return (\n    <div>\n      <h2>Pokémon List</h2>\n      {data.pokemons.map((p: any) => (\n        <div key={p.name}>\n          <p>{p.name}</p>\n          <img src={p.image} width={120} />\n        </div>\n      ))}\n    </div>\n  );\n}"],"names":[],"mappings":";;;;;AAEA;AAAA;AAFA;;;AAIA,MAAM,eAAe,qJAAG,CAAC;;;;;;;AAOzB,CAAC;AAEc,SAAS;IACtB,MAAM,EAAE,OAAO,EAAE,KAAK,EAAE,IAAI,EAAE,GAAG,IAAA,4KAAQ,EAAC;IAE1C,IAAI,SAAS,qBAAO,8OAAC;kBAAE;;;;;;IACvB,IAAI,OAAO,qBAAO,8OAAC;kBAAE;;;;;;IAErB,qBACE,8OAAC;;0BACC,8OAAC;0BAAG;;;;;;YACH,KAAK,QAAQ,CAAC,GAAG,CAAC,CAAC,kBAClB,8OAAC;;sCACC,8OAAC;sCAAG,EAAE,IAAI;;;;;;sCACV,8OAAC;4BAAI,KAAK,EAAE,KAAK;4BAAE,OAAO;;;;;;;mBAFlB,EAAE,IAAI;;;;;;;;;;;AAOxB"}}]
+}
