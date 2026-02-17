@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<form id="myForm">
+  <input type="text" id="name" placeholder="Name"><br><br>
+  <input type="email" id="email" placeholder="Email"><br><br>
+  <input type="password" id="password" placeholder="Password"><br><br>
+  <button type="submit">Submit</button>
+</form>
+
+<p id="error" style="color:red;"></p>
+
+<script>
+$("#myForm").submit(function(e){
+  e.preventDefault();
+
+  if ($("#name").val() == "") {
+    $("#error").text("Name required");
+  }
+  else if ($("#password").val().length < 6) {
+    $("#error").text("Password must be 6 characters");
+  }
+  else {
+    $("#error").text("Form Submitted Successfully");
+  }
+});
+</script>
+
+</body>
+</html>
